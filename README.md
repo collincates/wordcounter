@@ -1,6 +1,8 @@
 !WORDCOUNTER!
 
 Inputs a text file and returns a total count for each unique word.
+Either prints to shell or writes to a file depending on if
+display() or write_to_file() are used.
 
 E.g. with "Hello Hi Hello World Hi There":
 
@@ -9,7 +11,6 @@ E.g. with "Hello Hi Hello World Hi There":
 1 World
 1 There
 
-This initial version splits a file using whitespace only.
 
 Future changes to make:
 
