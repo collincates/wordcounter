@@ -1,18 +1,25 @@
 from sys import argv
+import re
 
 def word_count(file):
     """Tally the quantity of each unique word."""
     unique_words = dict()
+    delimiters = (',', ' ', '.', ';', '\n', '\'', "!", "(", ")", "-", \
+                  "—", "?", "\"", ":", "@", "#", "$", "*", "•")
+    pattern = "|".join(map(re.escape, delimiters))
+    print(pattern)
 
     with open(input_file, "r") as text:
-        for line in text:
-            for word in line.split():
-                if word in unique_words:
-                    unique_words[word] += 1
-                else:
-                    unique_words[word] = 1
+        un_punct = re.split(pattern, text.read())
+        print(un_punct)
+        for word in un_punct:
+            if len(word) == 0:
+                pass
+            elif word in unique_words:
+                unique_words[word] += 1
+            else:
+                unique_words[word] = 1
     return unique_words
-
 
 def display(dictionary, key="word", reverse=True):
     ### MAKE THIS WORK WITH MULTIPLE CONTAINER TYPES ###
