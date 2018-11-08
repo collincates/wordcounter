@@ -1,8 +1,8 @@
-!WORDCOUNTER!
+<h1>!WORDCOUNTER!</h1>
 
 Inputs a text file and returns a total count for each unique word.
 Either prints to shell or writes to a file depending on if
-display() or write_to_file() are used.
+`display()` or `write_to_file()` are used.
 
 E.g. with "Hello Hi Hello World Hi There":
 
