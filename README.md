@@ -21,10 +21,13 @@ E.g. with a file containing "Hello Hi Hello World Hi There":
 
 -Incorporate regex
 
--Create option to ignore common
-<ul>
-    <li>prepositions `(in, to, on, with)`</li>
-    <li>conjunctions `(but, if, for, or)`</li>
-    <li>determiners  `(a, the, this, many)`</li>
-</ul>
+-Create option to ignore common:
+
+   + prepositions `in, to, on, with`
+
+   + conjunctions `but, if, for, or`
+
+   + determiners  `a, the, this, many`
+
+
 -Take into account file encoding type.
